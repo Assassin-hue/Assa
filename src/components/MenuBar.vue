@@ -1,0 +1,258 @@
+<template>
+  <el-menu :default-active="$route.path" class="menu-bar">
+    <menu-item :menuList="menuList"></menu-item>
+  </el-menu>
+</template>
+
+<script>
+import MenuItem from "./MenuItem.vue";
+export default {
+  name: "Home",
+  components: {
+    MenuItem,
+  },
+  data() {
+    return {
+      menuList: [
+        // 权限管理
+        // {
+        //   children: [
+        //     {
+        //       children: [],
+        //       code: "sys:dept",
+        //       createTime: 1586703509000,
+        //       icon: "el-icon-copy-document",
+        //       id: 11,
+        //       isHome: 0,
+        //       label: "机构管理",
+        //       name: "departmentList",
+        //       orderNum: 2,
+        //       parentId: 1,
+        //       path: "/departmentList",
+        //       remark: "机构管理",
+        //       type: "1",
+        //       updateTime: 1586337139000,
+        //       url: "/system/Department/DepartmentList",
+        //     },
+        //     {
+        //       children: [],
+        //       code: "sys:role",
+        //       createTime: 1691464271000,
+        //       icon: "el-icon-rank",
+        //       id: 13,
+        //       isHome: 0,
+        //       label: "角色管理",
+        //       name: "roleList",
+        //       orderNum: 4,
+        //       parentId: 1,
+        //       path: "/roleList",
+        //       type: "1",
+        //       updateTime: 1691565988000,
+        //       url: "/system/Role/RoleList",
+        //     },
+        //     {
+        //       children: [],
+        //       code: "sys:menu",
+        //       createTime: 1691464271000,
+        //       icon: "el-icon-menu",
+        //       id: 14,
+        //       isHome: 0,
+        //       label: "权限管理",
+        //       name: "menuList",
+        //       orderNum: 5,
+        //       parentId: 1,
+        //       path: "/menuList",
+        //       type: "1",
+        //       updateTime: 1691565988000,
+        //       url: "/system/Menu/MenuList",
+        //     },
+        //   ],
+        //   code: "sys:manage",
+        //   createTime: 1691464271000,
+        //   icon: "el-icon-document",
+        //   id: 1,
+        //   isHome: 0,
+        //   label: "系统管理",
+        //   orderNum: 1,
+        //   parentId: 0,
+        //   path: "/system",
+        //   type: "0",
+        //   updateTime: 1691565988000,
+        // },
+        // 工作日常
+        // {
+        //     children: [
+        //         {
+        //             children: [],
+        //             code: "sys:goodsCategory",
+        //             createTime: 1586703272000,
+        //             icon: "el-icon-s-data",
+        //             id: 21,
+        //             isHome: 0,
+        //             label: "个人周报",
+        //             name: "weekly",
+        //             orderNum: 1,
+        //             parentId: 2,
+        //             path: "/weekly",
+        //             type: "1",
+        //             updateTime: 1586683590000,
+        //             url: "/workData/weekly/weeklyList"
+        //         },
+        //         {
+        //             children: [
+        //                 {
+        //                     children: [],
+        //                     code: "sys:goodsBrand",
+        //                     createTime: 1586683924000,
+        //                     icon: "el-icon-tickets",
+        //                     id: 221,
+        //                     isHome: 0,
+        //                     label: "技术手册",
+        //                     name: "technology",
+        //                     orderNum: 1,
+        //                     parentId: 22,
+        //                     path: "/technology",
+        //                     type: "1",
+        //                     updateTime: 1586683924000,
+        //                     url: "/workData/point/technology/technology"
+        //                 },
+        //                 {
+        //                     children: [],
+        //                     code: "sys:goodsBrand",
+        //                     createTime: 1586683924000,
+        //                     icon: "el-icon-tickets",
+        //                     id: 222,
+        //                     isHome: 0,
+        //                     label: "日常工具",
+        //                     name: "dailyTools",
+        //                     orderNum: 2,
+        //                     parentId: 22,
+        //                     path: "/dailyTools",
+        //                     type: "1",
+        //                     updateTime: 1586683924000,
+        //                     url: "/workData/point/dailyTools/dailyTools"
+        //                 },
+        //             ],
+        //             code: "sys:goodsBrand",
+        //             createTime: 1586683924000,
+        //             icon: "el-icon-tickets",
+        //             id: 22,
+        //             isHome: 0,
+        //             label: "新人指引",
+        //             name: "point",
+        //             orderNum: 2,
+        //             parentId: 2,
+        //             path: "/point",
+        //             type: "1",
+        //             updateTime: 1586683924000,
+        //         },
+        //         {
+        //             children: [
+
+        //             ],
+        //             code: "sys:goodsBrand",
+        //             createTime: 1586683924000,
+        //             icon: "el-icon-tickets",
+        //             id: 22,
+        //             isHome: 0,
+        //             label: "新人日报",
+        //             name: "goodsBrand",
+        //             orderNum: 2,
+        //             parentId: 2,
+        //             path: "/goodsBrand",
+        //             type: "1",
+        //             updateTime: 1586683924000,
+        //             url: "/goods/goodsBrand/goodsBrandList"
+        //         }
+        //     ],
+        //     code: "sys:goods",
+        //     createTime: 1586702987000,
+        //     icon: "el-icon-picture",
+        //     id: 2,
+        //     isHome: 0,
+        //     label: "工作日常",
+        //     name: "",
+        //     orderNum: 2,
+        //     parentId: 0,
+        //     path: "/workData",
+        //     type: "0",
+        //     updateTime: 1586683323000
+        // },
+        // 爬虫管理
+        {
+          children: [],
+          code: "sys:Reptile",
+          createTime: 1586703509000,
+          icon: "el-icon-copy-document",
+          id: 3,
+          isHome: 0,
+          label: "爬虫管理",
+          name: "reptile",
+          orderNum: 3,
+          parentId: 0,
+          path: "/meptile",
+          remark: "爬虫管理",
+          type: "0",
+          updateTime: 1586337139000,
+          url: "/Reptile/Reptile.vue",
+        },
+        // 标讯管理
+        {
+          children: [],
+          code: "sys:Message",
+          createTime: 1586703509000,
+          icon: "el-icon-copy-document",
+          id: 4,
+          isHome: 0,
+          label: "标讯管理",
+          name: "message",
+          orderNum: 4,
+          parentId: 0,
+          path: "/message",
+          remark: "标讯管理",
+          type: "0",
+          updateTime: 1586337139000,
+          url: "/Message/Message.vue",
+        },
+        // 用户管理
+        {
+          children: [],
+          code: "sys:user",
+          createTime: 1691464271000,
+          icon: "el-icon-s-custom",
+          id: 5,
+          isHome: 0,
+          label: "用户管理",
+          name: "user",
+          orderNum: 5,
+          parentId: 0,
+          path: "/user",
+          type: "1",
+          updateTime: 1691565988000,
+          url: "/User/UserList",
+        },
+        {
+          children: [],
+          code: "sys:oder",
+          createTime: 1691464271000,
+          icon: "el-icon-s-custom",
+          id: 5,
+          isHome: 0,
+          label: "订单查询",
+          name: "oder",
+          orderNum: 5,
+          parentId: 0,
+          path: "/oder",
+          type: "1",
+          updateTime: 1691565988000,
+          url: "/Oder/Oder",
+        },
+      ],
+    };
+  },
+};
+// :collapse="isCollapse"
+</script>
+
+<style lang="scss" scoped>
+</style>
